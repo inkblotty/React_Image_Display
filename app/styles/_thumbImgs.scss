@@ -1,0 +1,30 @@
+.image-menu {
+	padding: 2%;
+}
+
+.thumb-container {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 2% auto;
+	padding: 0;
+	width: 90%;
+
+	li {
+		display: inline-block;
+		margin: 1%;
+		width: 25%;
+	}
+}
+
+.thumb-wrapper {
+	display: inline-block;
+	width: 100%;
+}
+
+.thumb-img {
+	width: 100%;
+}

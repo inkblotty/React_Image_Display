@@ -1,0 +1,7 @@
+Router
+	-Toggle Menu (carousel view, thumbnails view)
+		- Index (thumbnails View)
+			* array of thumb images
+		- Carousel (images in full with arrows)
+			* big with arrows
+			* Netflix style view at bottom

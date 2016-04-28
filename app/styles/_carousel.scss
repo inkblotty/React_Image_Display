@@ -1,0 +1,35 @@
+.lightbox {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2% auto;
+	padding: 0;
+	width: 90%;
+}
+
+.arrow {
+	display: flex;
+	align-items: center;
+	height: 20em;
+	margin: 0;
+	padding: 0 3%;
+
+	i::before {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.big-img-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20em;
+	width: auto;
+}
+
+.big-img {
+	margin: 0;
+	width: 100%;
+}
