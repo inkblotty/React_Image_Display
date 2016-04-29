@@ -1,5 +1,20 @@
 .image-menu {
+	display: flex;
+	justify-content: flex-end;
 	padding: 2%;
+
+	.fa {
+		height: auto;
+		margin: 0;
+		width: 1.2em;
+	}
+
+	.btn:hover {
+		background-color: $brightAccent;
+		border: 1px solid darken($brightAccent, 10%);
+
+		transition: all 0.5s ease;
+	}
 }
 
 .thumb-container {
@@ -16,7 +31,7 @@
 	li {
 		display: inline-block;
 		margin: 1%;
-		width: 25%;
+		width: 12em;
 	}
 }
 
@@ -26,5 +41,6 @@
 }
 
 .thumb-img {
+	border-radius: 0.5em;
 	width: 100%;
 }

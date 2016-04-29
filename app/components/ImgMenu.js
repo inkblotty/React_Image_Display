@@ -6,10 +6,10 @@ const ImgMenu = props => {
 		<div>
 			<div className='image-menu'>
 				<Link to='/' className='btn menu-btn'>
-					<i className='fa fa-th' />
+					<span className='fa fa-th' />
 				</Link>
 				<Link to='/carousel' className='btn menu-btn'>
-					<i className='fa fa-picture-o' />
+					<span className='fa fa-picture-o' />
 				</Link>
 			</div>
 			{props.children}
