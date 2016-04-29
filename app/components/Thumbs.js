@@ -6,7 +6,7 @@ const Thumbs = props => {
 	let ThumbItems = ImgArray.map((item, index) => {
 		let key=`thumb${index}`;
 		return (
-			<li key={key}><Thumbnail imgSrc={item} /></li>
+			<li key={key}><Thumbnail imgSrc={item} imgIndex={index} /></li>
 		)
 	});
 

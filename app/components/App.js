@@ -14,7 +14,7 @@ const App = props => {
 		<Router history={browserHistory}>
 			<Route path="/" component={ImgMenu} >
 				<IndexRoute component={Thumbs} />
-				<Route path="carousel" component={Carousel} />
+				<Route path="carousel/:imgIndex" component={Carousel} />
 			</Route>
 		</Router>
 	)

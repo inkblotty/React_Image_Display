@@ -2,7 +2,8 @@ const React = require('react');
 const ImgArray = require('../imagesArray');
 
 const Carousel = props => {
-	var currentImg = props.query ? ImgArray[props.query.currentIndex] : ImgArray[0];
+	var currentImg = props.routeParams ? ImgArray[props.routeParams.imgIndex] : ImgArray[0];
+	currentImg = '../' + currentImg;
 
 	return (
 		<div className="carousel-container">
