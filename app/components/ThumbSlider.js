@@ -1,6 +1,8 @@
 const React = require('react');
 const Thumbnail = require('./Thumbnail');
 const SliderImages = require('./SliderImages');
+const Link = require('react-router').Link;
+const ImgArray = require('../imagesArray');
 
 const ThumbSlider = props => {
 	return (
