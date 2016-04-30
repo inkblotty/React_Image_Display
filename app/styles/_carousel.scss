@@ -3,7 +3,7 @@
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
-	margin: 2% auto;
+	margin: 0 auto;
 	padding: 0;
 	width: 90%;
 }
@@ -32,4 +32,37 @@
 .big-img {
 	margin: 0;
 	width: 100%;
+}
+
+
+.carousel-container {
+	margin: 0 auto;
+}
+
+.slider-container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	width: 100%;
+
+	.arrow.little {
+		height: 8em;
+	}
+}
+
+.slider-img-container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	margin: 0;
+	align-items: center;
+	overflow: hidden;
+	width: 90%;
+
+	li {
+		display: flex;
+		align-items: center;
+		height: 10em;
+		margin: 0 0.5%;
+	}
 }
