@@ -2,21 +2,23 @@ const React = require('react');
 const ImgArray = require('../imagesArray');
 const Thumbnail = require('./Thumbnail');
 
-const Thumbs = props => {
+const SliderImages = props => {
 	let ThumbItems = ImgArray.map((item, index) => {
-		let key=`thumb${index}`;
+		let key=`slider-thumb${index}`;
+		let url=`../${item}`;
+
 		return (
 			<li key={key}>
-				<Thumbnail imgSrc={item} imgIndex={index} />
+				<Thumbnail imgSrc={url} fromCarousel='true' imgIndex={index} />
 			</li>
 		)
 	});
 
 	return (
-		<ul className="thumb-container">
+		<ul className='slider-img-container'>
 			{ThumbItems}
 		</ul>
 	)
-}
+};
 
-module.exports = Thumbs;
+module.exports = SliderImages;

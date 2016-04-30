@@ -2,7 +2,12 @@ const React = require('react');
 const Link = require('react-router').Link;
 
 const Thumbnail = props => {
-	let pathname = `carousel/${props.imgIndex}`;
+
+	console.log(props.history);
+	
+	let pathname = props.fromCarousel === 'true' ? 
+		props.history.pop.push(imgIndex) : 
+		`carousel/${props.imgIndex}`;
 
 	return (
 		<div className="thumb-wrapper">

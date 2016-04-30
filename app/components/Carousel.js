@@ -1,5 +1,6 @@
 const React = require('react');
 const ImgArray = require('../imagesArray');
+const ThumbSlider = require('./ThumbSlider');
 
 const Carousel = props => {
 	var currentImg = props.routeParams ? ImgArray[props.routeParams.imgIndex] : ImgArray[0];
@@ -18,8 +19,7 @@ const Carousel = props => {
 					<i className="fa fa-caret-right" />
 				</div>
 			</div>
-			<div className="slider-img-container">
-			</div>
+			<ThumbSlider currentImg={currentImg} />
 		</div>
 	)
 }
