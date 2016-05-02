@@ -12,3 +12,33 @@
 .appear-leave {
 	opacity: 0;
 }
+
+.slide-left {
+	transition-duration: .7s;
+	transition-property: margin;
+	trasition-timing-function: ease-out;
+	margin-left: -100%;
+}
+
+.slide-right {
+	transition-duration: .7s;
+	transition-property: margin;
+	trasition-timing-function: ease-out;
+	margin-right: -100%;
+}
+
+.slide-left-enter.slide-left-enter-active {
+	margin-left: 0;
+}
+
+.slide-right-enter.slide-right-enter-active {
+	margin-right: 0;
+}
+
+.slide-left-leave {
+	margin-left: -100%;
+}
+
+.slide-right-leave {
+	margin-right: -100%;
+}
