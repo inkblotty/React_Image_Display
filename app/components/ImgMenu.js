@@ -1,6 +1,8 @@
 const React = require('react');
 const Link = require('react-router').Link;
 
+const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
 const ImgMenu = props => {
 	return (
 		<div>
@@ -12,7 +14,12 @@ const ImgMenu = props => {
 					<span className='fa fa-picture-o' />
 				</Link>
 			</div>
-			{props.children}
+			<ReactCSSTransitionGroup
+				transitionName="appear"
+				transitionEnterTimeout={500}
+				transitionLeaveTimeout={500}>
+				{React.cloneElement(props.children, {key:props.location.pathname})}
+			</ReactCSSTransitionGroup>
 		</div>
 	)
 }
