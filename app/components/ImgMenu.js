@@ -10,7 +10,7 @@ const ImgMenu = props => {
 				<Link to='/' className='btn menu-btn'>
 					<span className='fa fa-th' />
 				</Link>
-				<Link to='/carousel/1' className='btn menu-btn'>
+				<Link to='/carousel/0' className='btn menu-btn'>
 					<span className='fa fa-picture-o' />
 				</Link>
 			</div>

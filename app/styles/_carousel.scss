@@ -27,6 +27,13 @@
 	align-items: center;
 	height: 20em;
 	width: auto;
+
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 20em;
+	}
 }
 
 .big-img {

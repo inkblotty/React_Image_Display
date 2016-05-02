@@ -17,14 +17,15 @@
 	transition-duration: .7s;
 	transition-property: margin;
 	trasition-timing-function: ease-out;
-	margin-left: -100%;
+	margin-left: 2000px;
 }
 
 .slide-right {
 	transition-duration: .7s;
-	transition-property: margin;
+	transition-property: right;
 	trasition-timing-function: ease-out;
-	margin-right: -100%;
+
+	right: -100%;
 }
 
 .slide-left-enter.slide-left-enter-active {
@@ -32,13 +33,13 @@
 }
 
 .slide-right-enter.slide-right-enter-active {
-	margin-right: 0;
+	right: 0;
 }
 
 .slide-left-leave {
-	margin-left: -100%;
+	margin-left: 2000px;
 }
 
 .slide-right-leave {
-	margin-right: -100%;
+	right: -100%;
 }
