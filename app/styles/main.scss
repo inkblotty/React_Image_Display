@@ -18,6 +18,10 @@ a {
 	color: $mainText;
 }
 
+.hidden {
+	display: none;
+}
+
 .btn {
 	border: 1px solid grayscale(darken($mainBack, 8%));
 	border-radius: 0.25em;
