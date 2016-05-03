@@ -10,7 +10,8 @@ const Carousel = React.createClass({
 	getInitialState: function() {
 		return {
 			currentIndex: this.props.routeParams.imgIndex,
-			currentImg: ImgArray[this.props.routeParams.imgIndex]
+			currentImg: ImgArray[this.props.routeParams.imgIndex],
+			slideClass: 'slide'
 		}
 	},
 	prevImage: function() {
@@ -19,7 +20,8 @@ const Carousel = React.createClass({
 				Number(this.state.currentIndex) - 1 : ImgArray.length - 1,
 			currentImg: this.state.currentIndex > 0 ?
 				ImgArray[Number(this.state.currentIndex) - 1]
-				: ImgArray[ImgArray.length - 1]
+				: ImgArray[ImgArray.length - 1],
+			slideClass: 'slide-back'
 		})
 	},
 	nextImage: function() {
@@ -27,7 +29,8 @@ const Carousel = React.createClass({
 			currentIndex: this.state.currentIndex < ImgArray.length-1 ?
 				Number(this.state.currentIndex) + 1 : 0,
 			currentImg: this.state.currentIndex < ImgArray.length-1 ?
-				ImgArray[Number(this.state.currentIndex) + 1] : ImgArray[0]
+				ImgArray[Number(this.state.currentIndex) + 1] : ImgArray[0],
+			slideClass: 'slide'
 		});
 	},
 	render: function() {
@@ -42,7 +45,7 @@ const Carousel = React.createClass({
 					</div>
 					<ReactCSSTransitionGroup
 						className='big-img-wrapper'
-						transitionName="slide"
+						transitionName={this.state.slideClass}
 						transitionEnterTimeout={1000}
 						transitionLeaveTimeout={1000}
 						transitionAppear={false}>
