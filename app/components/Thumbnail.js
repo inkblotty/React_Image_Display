@@ -5,7 +5,6 @@ const Thumbnail = props => {
 	let pathname = `/carousel/${props.imgIndex}`;
 	let showClass = `thumb-wrapper ${props.showClass}`;
 
-	/*
 	if (!props.fromCarousel) {
 		return (
 			<div className="thumb-wrapper">
@@ -17,19 +16,19 @@ const Thumbnail = props => {
 	}
 	else {
 		return (
-			<div className="thumb-wrapper">
-				<img src={props.imgSrc} className="thumb-img" />
+			<div className="thumb-wrapper" onClick={props.onClick}>
+				<img src={props.imgSrc} className={`thumb-img ${props.imgIndex}`} />
 			</div>
 		)
-	}*/
-
+	}
+/*
 	return (
 		<div className={showClass}>
 			<Link to={pathname} >
 				<img src={props.imgSrc} className='thumb-img' />
 			</Link>
 		</div>
-	)
+	)*/
 }
 
 module.exports = Thumbnail;

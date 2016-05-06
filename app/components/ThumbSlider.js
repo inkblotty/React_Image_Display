@@ -42,7 +42,7 @@ const ThumbSlider = React.createClass({
 					<i className="fa fa-caret-left" />
 				</div>
 
-				<SliderImages slideClass={this.state.slideClass} activeRange={this.state.activeRange} active={this.props.currentImg} />
+				<SliderImages goToIndex={this.props.goToIndex} slideClass={this.state.slideClass} activeRange={this.state.activeRange} active={this.props.currentImg} />
 
 				<div onClick={this.scrollRight} className="little arrow right">
 					<i className="fa fa-caret-right" />

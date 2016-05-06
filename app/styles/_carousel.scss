@@ -49,6 +49,7 @@
 .slider-container {
 	display: flex;
 	flex-wrap: nowrap;
+	margin: 1% auto;
 	justify-content: center;
 	width: 100%;
 
@@ -69,7 +70,12 @@
 	li {
 		display: flex;
 		align-items: center;
-		height: 10em;
+		//height: 10em;
 		margin: 0 0.5%;
+	}
+
+	.thumb-img {
+		border-radius: 1em;
+		cursor: pointer;
 	}
 }

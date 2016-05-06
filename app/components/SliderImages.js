@@ -22,6 +22,7 @@ const SliderImages = props => {
 			return (
 				<li key={key}>
 					<Thumbnail
+						onClick={props.goToIndex}
 						imgSrc={url}
 						fromCarousel='true'
 						imgIndex={index} />

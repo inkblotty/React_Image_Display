@@ -33,6 +33,15 @@ const Carousel = React.createClass({
 			slideClass: 'slide'
 		});
 	},
+	goToIndex: function(e) {
+		var i = e.target.classList[1];
+
+		this.setState({
+			slideClass: this.state.currentIndex > i ? 'slide-back' : 'slide',
+			currentIndex: i,
+			currentImg: ImgArray[i]
+		});
+	},
 	render: function() {
 		let currentImg = '../' + this.state.currentImg;
 		//let key = `big-img-wrap${this.state.currentIndex}`;
@@ -55,7 +64,7 @@ const Carousel = React.createClass({
 						<i className="fa fa-caret-right" />
 					</div>
 				</div>
-				<ThumbSlider currentImg={currentImg} />
+				<ThumbSlider goToIndex={this.goToIndex} currentImg={currentImg} />
 			</div>
 		)
 	}
