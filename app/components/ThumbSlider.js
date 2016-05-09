@@ -8,30 +8,35 @@ const ThumbSlider = React.createClass({
 	getInitialState: function() {
 		return {
 			activeRange: [0, 5],
-			slideClass: 'slide'
+			slideClass: 'slide',
+			containerClass: 'slider-img-container'
 		}
 	},
 	scrollRight: function() {
 		if (this.state.activeRange[1] + 6 > ImgArray.length-1) {
 			this.setState({
-				activeRange: [ImgArray.length-6, ImgArray.length-1]
+				activeRange: [ImgArray.length-6, ImgArray.length-1],
+				containerClass: 'slider-img-container shifted'
 			})
 		}
 		else {
 			this.setState({
-				activeRange: [this.state.activeRange[0]+6, this.state.activeRange[1]+6]
+				activeRange: [this.state.activeRange[0]+6, this.state.activeRange[1]+6],
+				containerClass: 'slider-img-container shifted'
 			})
 		}
 	},
 	scrollLeft: function() {
 		if (this.state.activeRange[0] - 6 < 0) {
 			this.setState({
-				activeRange: [0, 5]
+				activeRange: [0, 5],
+				containerClass: 'slider-img-container'
 			})
 		}
 		else {
 			this.setState({
-				activeRange: [this.state.activeRange[0]-6, this.state.activeRange[1]-6]
+				activeRange: [this.state.activeRange[0]-6, this.state.activeRange[1]-6],
+				containerClass: 'slider-img-container'
 			})
 		}
 	},
@@ -42,7 +47,11 @@ const ThumbSlider = React.createClass({
 					<i className="fa fa-caret-left" />
 				</div>
 
-				<SliderImages goToIndex={this.props.goToIndex} slideClass={this.state.slideClass} activeRange={this.state.activeRange} active={this.props.currentImg} />
+				<SliderImages goToIndex={this.props.goToIndex}
+					slideClass={this.state.slideClass}
+					containerClass={this.state.containerClass}
+					activeRange={this.state.activeRange}
+					active={this.props.currentImg} />
 
 				<div onClick={this.scrollRight} className="little arrow right">
 					<i className="fa fa-caret-right" />

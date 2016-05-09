@@ -47,7 +47,7 @@ const SliderImages = props => {
 				transitionName={props.slideClass}
 				transitionEnterTimeout={1000}
 				transitionLeaveTimeout={1000}>
-			<ul className='slider-img-container'>
+			<ul className={props.containerClass}>
 				{ThumbItems}
 			</ul>
 		</ReactCSSTransitionGroup>
