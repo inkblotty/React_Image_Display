@@ -3,7 +3,7 @@ const Link = require('react-router').Link;
 
 const Thumbnail = props => {
 	let pathname = `/carousel/${props.imgIndex}`;
-	let showClass = `thumb-wrapper ${props.showClass}`;
+	let showClass = props.showClass ? `thumb-wrapper thumb-${props.showClass}` : 'thumb-wrapper thumb-hidden';
 
 	if (!props.fromCarousel) {
 		return (
@@ -16,7 +16,7 @@ const Thumbnail = props => {
 	}
 	else {
 		return (
-			<div className="thumb-wrapper" onClick={props.onClick}>
+			<div className={showClass} onClick={props.onClick}>
 				<img src={props.imgSrc} className={`thumb-img ${props.imgIndex}`} />
 			</div>
 		)

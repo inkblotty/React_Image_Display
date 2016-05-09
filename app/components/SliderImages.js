@@ -25,6 +25,17 @@ const SliderImages = props => {
 						onClick={props.goToIndex}
 						imgSrc={url}
 						fromCarousel='true'
+						imgIndex={index} 
+						showClass='active' />
+				</li>
+			)
+		} else {
+			return (
+				<li key={key}>
+					<Thumbnail
+						onClick={props.goToIndex}
+						imgSrc={url}
+						fromCarousel='true'
 						imgIndex={index} />
 				</li>
 			)
