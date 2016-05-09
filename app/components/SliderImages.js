@@ -14,9 +14,6 @@ const SliderImages = props => {
 	let ThumbItems = ImgArray.map((item, index) => {
 		let key=`slider-thumb${index}`;
 		let url=`../${item}`;
-		/*let showClass = isInRange(index, props.activeRange) ?
-			'slider-thumb' :
-			'hidden'*/
 
 		if (isInRange(index,props.activeRange)) {
 			return (

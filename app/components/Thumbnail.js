@@ -21,14 +21,6 @@ const Thumbnail = props => {
 			</div>
 		)
 	}
-/*
-	return (
-		<div className={showClass}>
-			<Link to={pathname} >
-				<img src={props.imgSrc} className='thumb-img' />
-			</Link>
-		</div>
-	)*/
 }
 
 module.exports = Thumbnail;

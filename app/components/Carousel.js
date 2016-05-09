@@ -45,7 +45,6 @@ const Carousel = React.createClass({
 	},
 	render: function() {
 		let currentImg = '../' + this.state.currentImg;
-		//let key = `big-img-wrap${this.state.currentIndex}`;
 
 		return (
 			<div className="carousel-container">
