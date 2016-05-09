@@ -1,3 +1,6 @@
+// useful for iterating through, since it's difficult
+// to find indexOf with lists of objects
+
 const images = [
 	'images/placeholder.png',
 	'images/placeholder4.png',

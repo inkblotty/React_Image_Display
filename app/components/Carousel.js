@@ -1,5 +1,6 @@
 const React = require('react');
 const ImgArray = require('../imagesArray');
+const ImgObjs = require('../imageObjs');
 const ThumbSlider = require('./ThumbSlider');
 //const ActiveImage = require('./ActiveImage');
 const Link = require('react-router').Link;
@@ -64,6 +65,11 @@ const Carousel = React.createClass({
 						<i className="fa fa-caret-right" />
 					</div>
 				</div>
+
+				<div className='caption'>
+					{ImgObjs[this.state.currentIndex].caption}
+				</div>
+
 				<ThumbSlider goToIndex={this.goToIndex} currentImg={currentImg} />
 			</div>
 		)
