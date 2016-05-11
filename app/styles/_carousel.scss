@@ -40,14 +40,17 @@
 	width: auto;
 
 	overflow: hidden;
+	z-index: 100;
 }
 
 .big-img {
+	cursor: none;
 	margin: 0;
 	height: 100%;
 	min-width: auto;
 	object-fit: contain;
 	//transition: all 0.4s ease-in-out;
+	z-index: 1;
 }
 
 .carousel-container {

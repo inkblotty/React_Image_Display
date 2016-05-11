@@ -5,6 +5,7 @@ const ThumbSlider = require('./ThumbSlider');
 //const ActiveImage = require('./ActiveImage');
 const Link = require('react-router').Link;
 
+const Hammer = require('react-hammerjs');
 const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 const Carousel = React.createClass({
@@ -52,6 +53,8 @@ const Carousel = React.createClass({
 					<div onClick={this.prevImage} className="arrow left">
 						<i className="fa fa-caret-left" />
 					</div>
+
+					<Hammer onTap={this.nextImage} onSwipe={this.nextImage}>
 					<ReactCSSTransitionGroup
 						className='big-img-wrapper'
 						transitionName={this.state.slideClass}
@@ -60,6 +63,8 @@ const Carousel = React.createClass({
 						transitionAppear={false}>
 							<img className='big-img' src={currentImg} key={currentImg}/>
 					</ReactCSSTransitionGroup>
+					</Hammer>
+
 					<div onClick={this.nextImage} className="arrow right">
 						<i className="fa fa-caret-right" />
 					</div>
