@@ -2,7 +2,6 @@ const React = require('react');
 const ImgArray = require('../imagesArray');
 const ImgObjs = require('../imageObjs');
 const ThumbSlider = require('./ThumbSlider');
-//const ActiveImage = require('./ActiveImage');
 const Link = require('react-router').Link;
 
 const Hammer = require('react-hammerjs');
