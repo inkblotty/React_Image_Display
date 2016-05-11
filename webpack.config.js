@@ -28,26 +28,26 @@ const common = {
 		filename: 'bundle.js'
 	},
 	module: {
-		loaders: [
-			{
-				// Set up scss
-				// Test expects a RegExp! Note slashes!
-				test: /\.scss$/,
-				loaders: ['style', 'css', "sass"],
-				include: PATHS.app
-			},
-			{
-				// Set up js and jsx
-				test: /\.js$/,
-				loader: 'babel',
-				query: {
-					cacheDirectory: true,
-					presets: ['react', 'es2015']
+			loaders: [
+				{
+					// Set up scss
+					// Test expects a RegExp! Note slashes!
+					test: /\.scss$/,
+					loaders: ['style', 'css', "sass"],
+					include: PATHS.app
 				},
-				include: PATHS.app
-			}
-		]
-	}
+				{
+					// Set up js and jsx
+					test: /\.js$/,
+					loader: 'babel',
+					query: {
+						cacheDirectory: true,
+						presets: ['react', 'es2015']
+					},
+					include: PATHS.app
+				}
+			]
+		},
 };
 
 /* Default configuration. We will return this
@@ -103,7 +103,15 @@ if (TARGET === 'build') {
 					'NODE_ENV': JSON.stringify('production')
 				}
 			})
-		]
+		],
+		module: {
+			loaders: [
+				{
+					test: /.*\/app\/.*\.js$/,
+					loader: "uglify"
+				}
+			]
+		}
 	});
 }
 
